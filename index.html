@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuento Infantil Interactivo</title>
+    <!-- Fuente infantil legible para baja visión -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Librería PDF.js para procesar el PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <!-- Librería PageFlip para el efecto de paso de página -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>📖 Cuento Interactivo</h1>
+        
+        <!-- Barra de herramientas de accesibilidad e interacción -->
+        <div class="toolbar">
+            <!-- Botones para modificar el tamaño / zoom -->
+            <button id="btn-zoom-in" class="tool-btn" title="Agrandar vista / texto">🔍 A+</button>
+            <button id="btn-zoom-out" class="tool-btn" title="Achicar vista / texto">🔍 A-</button>
+            
+            <!-- Botón para lectura en voz alta para alumnos con baja visión -->
+            <button id="btn-read-aloud" class="tool-btn speech-btn" title="Escuchar cuento en voz alta">🔊 Leer en Voz Alta</button>
+        </div>
+
+        <div id="loading">✨ Cargando tu cuento mágico, por favor espera...</div>
+    </header>
+
+    <main class="main-content">
+        <!-- Botón página anterior -->
+        <button id="btn-prev" class="nav-btn prev-btn" aria-label="Página anterior">◀️ Anterior</button>
+
+        <!-- Contenedor del libro -->
+        <div class="book-container">
+            <div id="flip-book" class="flip-book"></div>
+        </div>
+
+        <!-- Botón página siguiente -->
+        <button id="btn-next" class="nav-btn next-btn" aria-label="Página siguiente">Siguiente ▶️</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
